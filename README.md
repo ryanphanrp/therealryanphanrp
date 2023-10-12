@@ -1,4 +1,4 @@
-![therealRYANPHAN](https://github.com/ryanphanrp/therealryanphanrp/assets/51282340/9e70d069-a032-43cb-b9b0-062b9678ed21)![therealRYANPHAN](https://github.com/ryanphanrp/therealryanphanrp/assets/51282340/67fc2cda-e004-4ac9-876e-77f839159fa3)
+![Thiết kế chưa có tên](https://github.com/ryanphanrp/therealryanphanrp/assets/51282340/ab185ae0-85f5-467d-9e19-5a9af180e8a6)
 
 # therealRYANPHAN
 The personal website project has been built by Turborepo and ShadUI.
