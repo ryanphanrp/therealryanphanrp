@@ -1,0 +1,16 @@
+{
+  "extends": "tsconfig/base.json",
+  "include": ["."],
+  "compilerOptions": {
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "preserveWatchOutput": true,
+    "module": "ESNext",
+    "target": "ES5",
+    "baseUrl": ".",
+    "paths": {
+      "@shared-utils/*": ["./*"]
+    }
+  },
+  "exclude": ["dist", "build", "node_modules"]
+}
