@@ -1,9 +1,9 @@
-import { Toaster } from '@shadui/toaster'
 import type { Metadata } from 'next'
 import { Work_Sans } from 'next/font/google'
 import NavBar from 'src/components/nav-bar'
 import 'ui/styles/globals.css'
 import './globals.css'
+import { Toaster } from '@shadui/sonner'
 
 const fontBase = Work_Sans({ subsets: ['latin'] })
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={fontBase.className}>
-        <Toaster />
+        <Toaster richColors position='top-right' />
         <NavBar className="border-b border-gray-300 bg-white" />
         <main className="mx-auto w-full max-w-5xl sm:p-4">{children}</main>
       </body>

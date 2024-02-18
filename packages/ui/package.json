@@ -27,7 +27,9 @@
     "@radix-ui/react-toast": "^1.1.5",
     "class-variance-authority": "^0.7.0",
     "lucide-react": "^0.331.0",
+    "next-themes": "^0.2.1",
     "shared-utils": "workspace:*",
+    "sonner": "^1.4.0",
     "tailwindcss-animate": "^1.0.7"
   }
 }
