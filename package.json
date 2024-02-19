@@ -4,6 +4,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
     "format": "prettier '**/*.{js,ts,css,scss,jsx,tsx}' --write",
     "ui:add": "pnpm --filter ui ui:add",
     "prepare": "husky install"

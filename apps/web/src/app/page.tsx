@@ -1,17 +1,15 @@
-'use client'
-import { Button } from '@shadui/button'
-import { Input } from '@shadui/input'
-import { useToast } from '@shadui/use-toast'
-import siteConfig from 'config/site.config'
-import { useRef } from 'react'
+"use client"
+import { Button } from "@shadui/button"
+import { Input } from "@shadui/input"
+import siteConfig from "config/site.config"
+import { useRef } from "react"
+import { toast } from "@shadui/sonner"
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null)
-  const { toast } = useToast()
 
   const onClickMe = (_evt: React.MouseEvent) => {
-    toast({
-      title: siteConfig.title,
+    toast.message(siteConfig.title, {
       description: inputRef.current?.value
     })
   }
@@ -25,10 +23,7 @@ export default function Home() {
           </Button>
           <Button
             onClick={() => {
-              toast({
-                title: 'Hello, My name is Ryan.',
-                description: 'Thursday, October 12, 2023'
-              })
+              toast.info("Hello, My name is Ryan.")
             }}>
             Button
           </Button>

@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ['ui', 'shared-utils']
+  transpilePackages: ["ui", "shared-utils", "tsconfig"]
 }
