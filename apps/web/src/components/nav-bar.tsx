@@ -1,10 +1,10 @@
-import siteConfig from '@/config/site.config'
-import Link from 'next/link'
-import { cn } from 'shared-utils/cn'
+import siteConfig from "@/config/site.config"
+import Link from "next/link"
+import { cn } from "shared-utils/cn"
 
 export function NavBar({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
   return (
-    <nav className={cn('flex h-16 w-full items-center px-4 max-sm:justify-between', className)} {...props}>
+    <nav className={cn("flex h-16 w-full items-center px-4 max-sm:justify-between", className)} {...props}>
       <Link
         href="/"
         className="hover:text-primary mr-8 flex items-center space-x-2 font-semibold transition-colors md:text-lg">
