@@ -15,7 +15,7 @@ export default function Home() {
   }
 
   return (
-    <section className="flex h-full w-full items-center justify-center">
+    <section className="flex h-full w-full items-center justify-center p-4">
       <div className="container rounded-md border border-gray-600 bg-white p-4">
         <div>
           <Button variant="outline" onClick={onClickMe}>

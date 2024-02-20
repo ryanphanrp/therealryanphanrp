@@ -6,10 +6,8 @@ body {
 }
 
 body {
-  background-repeat: no-repeat, no-repeat;
-  background-position:
-    center center,
-    center center;
-  background-size: cover, cover;
-  background-image: url("https://aadcdn.msauth.net/shared/1.0/content/images/backgrounds/2-small_2055002f2daae2ed8f69f03944c0e5d9.jpg");
+  background:
+    linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #fff 70vh),
+    fixed 0 0 /20px 20px radial-gradient(#d1d1d1 1px, transparent 0),
+    fixed 10px 10px /20px 20px radial-gradient(#d1d1d1 1px, transparent 0);
 }
