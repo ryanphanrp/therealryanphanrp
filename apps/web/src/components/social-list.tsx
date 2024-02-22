@@ -1,11 +1,11 @@
 "use client"
 
-import { Instagram, Github, Facebook, Aperture } from "lucide-react"
+import { Instagram, Github, Facebook, Aperture, LucideIcon } from "lucide-react"
 import { FC } from "react"
 
 interface SocialItemProps {
   link: string
-  icon: any
+  icon: LucideIcon
   item: string
 }
 
