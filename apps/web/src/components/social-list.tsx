@@ -1,5 +1,6 @@
 "use client"
 
+import { cn } from "@shared-utils/cn"
 import { Instagram, Github, Facebook, Aperture } from "lucide-react"
 import type { FC } from "react"
 
@@ -42,9 +43,13 @@ const SocialItem: FC<SocialItemProps> = ({ link, icon }) => {
   )
 }
 
-const SocialList: FC = () => {
+interface SocialListProps extends React.HTMLAttributes<HTMLDivElement> {
+  asChild?: boolean
+}
+
+const SocialList: FC<SocialListProps> = ({ className, ...props }) => {
   return (
-    <div className="social-list ml-4 flex">
+    <div className={cn("social-list ml-4 flex", className)} {...props}>
       {socialList.map(item => (
         <SocialItem key={item.item} {...item} />
       ))}
