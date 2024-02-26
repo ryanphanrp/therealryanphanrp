@@ -1,6 +1,6 @@
-import siteConfig from "@/config/site.config"
 import Link from "next/link"
 import { cn } from "shared-utils/cn"
+import siteConfig from "@/config/site.config"
 
 export function NavBar({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
   return (
