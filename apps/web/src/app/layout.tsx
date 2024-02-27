@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
-import { Work_Sans as WorkSans } from "next/font/google"
-import NavBar from "src/components/nav-bar"
+import { Space_Grotesk as SpaceGrotesk } from "next/font/google"
 import "ui/styles/globals.css"
 import "./globals.css"
 import { Toaster } from "@shadui/sonner"
+import Header from "../components/header"
+import { cn } from "@shared-utils/cn"
 
-const fontBase = WorkSans({ subsets: ["latin"] })
+const fontBase = SpaceGrotesk({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "therealryanphan",
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={fontBase.className}>
+      <body className={cn(fontBase.className, "mx-4 mb-40 mt-8 flex max-w-2xl flex-col antialiased lg:mx-auto")}>
         <Toaster richColors position="top-right" />
-        <NavBar className="border-gray-30 border-b" />
-        <main className="mx-auto w-full max-w-5xl sm:p-4">{children}</main>
+        <Header />
+        <main className="mx-auto h-full w-full max-w-5xl p-8 sm:p-4">{children}</main>
       </body>
     </html>
   )

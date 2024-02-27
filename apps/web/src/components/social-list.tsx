@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@shared-utils/cn"
-import { Instagram, Github, Facebook, Aperture } from "lucide-react"
+import { Aperture, Facebook, Github, Instagram } from "lucide-react"
 import type { FC } from "react"
 
 interface SocialItemProps {
