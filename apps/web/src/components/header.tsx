@@ -16,7 +16,7 @@ const navItems = {
 }
 
 const Header: FC = () => {
-  let pathname = usePathname() || "/"
+  const pathname = usePathname() || "/"
   return (
     <header className="flex w-full justify-center py-8">
       <div className="flex flex-row space-x-0 pr-10">
