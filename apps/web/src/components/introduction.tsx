@@ -1,6 +1,6 @@
 import type { FC } from "react"
-import SocialList from "./social-list"
 import siteCfg from "@/config/site.config"
+import SocialList from "./social-list"
 
 const Introdution: FC = () => {
   return (
