@@ -1,12 +1,11 @@
 import type { Metadata } from "next"
-import { Space_Grotesk as SpaceGrotesk } from "next/font/google"
-import "ui/styles/globals.css"
-import "./globals.css"
+import { GeistSans } from "geist/font/sans"
+import "../styles/globals.css"
 import { Toaster } from "@shadui/sonner"
-import Header from "../components/header"
 import { cn } from "@shared-utils/cn"
+import Header from "../components/header"
 
-const fontBase = SpaceGrotesk({ subsets: ["latin"] })
+const fontBase = GeistSans
 
 export const metadata: Metadata = {
   title: "therealryanphan",

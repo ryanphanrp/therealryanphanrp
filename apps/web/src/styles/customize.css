@@ -1,0 +1,12 @@
+.text-description {
+  @apply text-neutral-700;
+}
+
+.highlight-underline {
+  @apply cursor-pointer underline underline-offset-4 hover:decoration-cyan-700 hover:decoration-2;
+}
+
+/* About */
+.text-write-about {
+  @apply mb-1 text-base;
+}
