@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={cn(fontBase.className, "mx-4 mb-40 mt-8 flex max-w-2xl flex-col antialiased lg:mx-auto")}>
-        <Toaster richColors position="top-right" />
+        <Toaster position="top-right" richColors />
         <Header />
         <main className="mx-auto h-full w-full max-w-5xl p-8 sm:p-4">{children}</main>
       </body>
