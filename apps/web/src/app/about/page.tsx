@@ -4,7 +4,7 @@ import siteConfig from "@/config/site.config"
 export default function Page() {
   return (
     <main className="md:text-md text-description text-sm">
-      <Image alt="image" src="/pepe.svg" width="80" height="80" />
+      <Image alt="image" height="80" src="/pepe.svg" width="80" />
       <div className="my-4 text-2xl font-medium">Something about me</div>
       <div className="text-write-about">
         I&apos;m <span className="font-semibold">Ryan Phan</span>, a SWE and enthusiast, humorous guy.
@@ -31,7 +31,7 @@ export default function Page() {
       <br />
       <div className="text-write-about">
         Can connect me on{" "}
-        <a className="highlight-underline" rel="noreferrer" href={siteConfig.socialList.facebook} target="_blank">
+        <a className="highlight-underline" href={siteConfig.socialList.facebook} rel="noreferrer" target="_blank">
           Facebook
         </a>
         . I am always open to interesting conversations and collaborations.

@@ -16,7 +16,7 @@
     "strict": false,
     "target": "ES5",
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
       "@shadui/*": ["../../packages/ui/components/ui/*"],
       "@shared-utils/*": ["../../packages/shared-utils/*"]
     }

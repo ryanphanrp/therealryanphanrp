@@ -1,10 +1,12 @@
 {
+  "name": "therealryanphan",
   "private": true,
+  "packageManager": "pnpm@8.15.0",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "lint:fix": "turbo run lint:fix",
+    "lint:fix": "turbo run lint -- --fix",
     "format": "prettier '**/*.{js,ts,css,scss,jsx,tsx}' --write",
     "ui:add": "pnpm --filter ui ui:add",
     "prepare": "husky install"
@@ -16,7 +18,5 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tsconfig": "workspace:*",
     "turbo": "^1.12.4"
-  },
-  "packageManager": "pnpm@8.15.0",
-  "name": "therealryanphan"
+  }
 }

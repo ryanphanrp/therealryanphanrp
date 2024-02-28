@@ -1,5 +1,5 @@
-import siteConfig from "config/site.config"
-import { Metadata } from "next"
+import type { Metadata } from "next"
+import siteConfig from "@/config/site.config"
 
 export const metadata: Metadata = {
   title: `About • ${siteConfig.title}`

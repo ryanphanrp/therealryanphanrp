@@ -24,12 +24,12 @@ const Header: FC = () => {
           const isActive = path === pathname
           return (
             <Link
-              key={path}
-              href={path}
               className={cn("relative flex px-2 py-1 align-middle transition-all hover:text-cyan-800", {
                 "font-semibold text-cyan-800": isActive,
                 "text-neutral-500": !isActive
-              })}>
+              })}
+              href={path}
+              key={path}>
               {name}
               {isActive ? (
                 <motion.div
