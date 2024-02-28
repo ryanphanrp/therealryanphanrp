@@ -1,0 +1,9 @@
+@import "./customize.css";
+@import "ui/styles/globals.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

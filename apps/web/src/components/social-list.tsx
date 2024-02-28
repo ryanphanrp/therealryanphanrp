@@ -3,6 +3,7 @@
 import { cn } from "@shared-utils/cn"
 import { Aperture, Facebook, Github, Instagram } from "lucide-react"
 import type { FC } from "react"
+import siteConfig from "@/config/site.config"
 
 interface SocialItemProps {
   link: string
@@ -14,22 +15,22 @@ const socialList: SocialItemProps[] = [
   {
     item: "instagram",
     icon: <Instagram />,
-    link: "https://www.instagram.com/__therealtinhtute"
+    link: siteConfig.socialList.instagram
   },
   {
     item: "github",
     icon: <Github />,
-    link: "https://github.com/ryanphanrp"
+    link: siteConfig.socialList.github
   },
   {
     item: "facebook",
     icon: <Facebook />,
-    link: "https://www.facebook.com/tinhtute.99"
+    link: siteConfig.socialList.facebook
   },
   {
     item: "flickr",
     icon: <Aperture />,
-    link: "https://www.flickr.com/photos/143023436@N05/"
+    link: siteConfig.socialList.flickr
   }
 ]
 
