@@ -2,7 +2,7 @@
 
 import { cn } from "@shared-utils/cn"
 import { Aperture, Facebook, Github, Instagram } from "lucide-react"
-import type { FC } from "react"
+import React from "react"
 import siteConfig from "@/config/site.config"
 
 interface SocialItemProps {
@@ -34,7 +34,7 @@ const socialList: SocialItemProps[] = [
   }
 ]
 
-const SocialItem: FC<SocialItemProps> = ({ link, icon }) => {
+const SocialItem: React.FC<SocialItemProps> = ({ link, icon }) => {
   return (
     <div className="social-item mx-2">
       <a className="transition-all duration-300 hover:text-cyan-700" href={link} rel="noreferrer" target="_blank">
@@ -48,7 +48,7 @@ interface SocialListProps extends React.HTMLAttributes<HTMLDivElement> {
   asChild?: boolean
 }
 
-const SocialList: FC<SocialListProps> = ({ className, ...props }) => {
+const SocialList: React.FC<SocialListProps> = ({ className, ...props }) => {
   return (
     <div className={cn("social-list ml-4 flex", className)} {...props}>
       {socialList.map(item => (
