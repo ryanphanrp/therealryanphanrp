@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 .text-description {
   @apply text-neutral-700;
 }
@@ -9,4 +11,29 @@
 /* About */
 .text-write-about {
   @apply mb-1 text-base;
+}
+
+
+
+.sh__class {
+  color: #2d5e9d;
+}
+.sh__identifier {
+  color: #2d333b;
+}
+.sh__sign {
+  color: #8996a3;
+}
+.sh__string {
+  color: #00a99a;
+}
+.sh__keyword {
+  color: #f47067;
+}
+.sh__comment {
+  color: #a19595;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace !important;
 }

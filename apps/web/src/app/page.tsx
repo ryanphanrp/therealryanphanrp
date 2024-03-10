@@ -1,11 +1,12 @@
 "use client"
 
-import Introdution from "../components/introduction"
+import React from "react"
+import Introduction from "../components/introduction"
 
-export default function Home() {
+export default function Home(): React.ReactElement {
   return (
     <section className="h-full w-full p-4">
-      <Introdution />
+      <Introduction />
     </section>
   )
 }

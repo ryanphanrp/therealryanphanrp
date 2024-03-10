@@ -1,4 +1,4 @@
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["ui", "shared-utils", "tsconfig"]
+  transpilePackages: ["ui", "shared-utils", "tsconfig", "notion"]
 }

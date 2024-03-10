@@ -10,13 +10,19 @@ const navItems = {
   "/": {
     name: "home"
   },
+  "/blog": {
+    name: "blog"
+  },
   "/about": {
     name: "about"
   }
 }
 
 const Header: FC = () => {
-  const pathname = usePathname() || "/"
+  let pathname = usePathname() || "/"
+  if (pathname.includes("/blog/")) {
+    pathname = "/blog"
+  }
   return (
     <header className="flex w-full justify-center py-8">
       <div className="flex flex-row space-x-0 pr-10">
