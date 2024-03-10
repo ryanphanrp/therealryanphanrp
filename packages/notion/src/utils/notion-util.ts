@@ -2,7 +2,7 @@ import { Block, BlockMap, ExtendedRecordMap } from "notion-types"
 import { getPageProperty } from "notion-utils"
 export * from "./map-image-url"
 export * from "./map-page-url"
-export { isUrl, formatDate, formatNotionDateTime } from 'notion-utils'
+export { isUrl, formatDate, formatNotionDateTime } from "notion-utils"
 
 export function getProperty(name: string, pageId: string, recordMap: ExtendedRecordMap) {
   const block = recordMap.block[pageId]?.value as Block

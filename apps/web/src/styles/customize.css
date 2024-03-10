@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 .text-description {
   @apply text-neutral-700;
@@ -12,8 +12,6 @@
 .text-write-about {
   @apply mb-1 text-base;
 }
-
-
 
 .sh__class {
   color: #2d5e9d;
@@ -35,5 +33,5 @@
 }
 
 code {
-  font-family: 'JetBrains Mono', monospace !important;
+  font-family: "JetBrains Mono", monospace !important;
 }
