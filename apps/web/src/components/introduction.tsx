@@ -9,7 +9,7 @@ const Introdution: FC = () => {
       <div className="text-description mb-4">
         <p className="text-xl">
           Hi! Im{" "}
-          <span className="cursor-pointer font-medium text-black decoration-cyan-700 decoration-2 transition duration-700 ease-in-out hover:underline hover:underline-offset-2">
+          <span className="decoration-primary cursor-pointer font-medium text-black decoration-2 transition duration-700 ease-in-out hover:underline hover:underline-offset-2">
             {siteCfg.me}
           </span>
           👋.

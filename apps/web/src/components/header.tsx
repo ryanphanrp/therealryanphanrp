@@ -24,7 +24,7 @@ const Header: FC = () => {
           const isActive = path === pathname
           return (
             <Link
-              className={cn("relative flex px-2 py-1 align-middle transition-all hover:text-cyan-800", {
+              className={cn("hover:text-primary relative flex px-2 py-1 align-middle transition-all", {
                 "font-semibold text-cyan-800": isActive,
                 "text-neutral-500": !isActive
               })}
@@ -33,7 +33,7 @@ const Header: FC = () => {
               {name}
               {isActive ? (
                 <motion.div
-                  className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-cyan-700 from-transparent to-cyan-900"
+                  className="bg-primary to-primary absolute inset-0 top-7 z-[-1] mx-2 h-[1px] from-transparent"
                   layoutId="sidebar"
                   transition={{
                     type: "spring",
