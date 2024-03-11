@@ -1,10 +1,10 @@
-import React from "react"
-import { useNotionContext } from "../context"
-import { getBlockTitle } from "notion-utils"
+import copy from "copy-to-clipboard"
 import { Block } from "notion-types"
+import { getBlockTitle } from "notion-utils"
+import React from "react"
 import { highlight } from "sugar-high"
 import { Button } from "ui/components/ui/button"
-import copy from "copy-to-clipboard"
+import { useNotionContext } from "../context"
 
 type CodeBlockProps = {
   block: Block
@@ -23,7 +23,7 @@ export default function CodeBlock({ block, defaultLanguage = "text", ...props }:
         <div className="code-language text-primary-foreground">{language}</div>
         <Button
           variant="ghost"
-          className="code-copy-button text-primary-foreground h-6 px-2 py-0.5"
+          className="code-copy-button text-primary-foreground h-6 px-2 py-0.5 hover:bg-transparent hover:text-white hover:underline"
           onClick={() => copy(content)}>
           Copy
         </Button>

@@ -1,8 +1,8 @@
 import { Block, BlockMap, ExtendedRecordMap } from "notion-types"
 import { getPageProperty } from "notion-utils"
+export { formatDate, formatNotionDateTime, isUrl } from "notion-utils"
 export * from "./map-image-url"
 export * from "./map-page-url"
-export { isUrl, formatDate, formatNotionDateTime } from "notion-utils"
 
 export function getProperty(name: string, pageId: string, recordMap: ExtendedRecordMap) {
   const block = recordMap.block[pageId]?.value as Block
@@ -90,4 +90,33 @@ export const getYoutubeId = (url: string): string | null => {
   }
 
   return null
+}
+
+export function formatDateTime(date: string) {
+  let currentDate = new Date()
+  let targetDate = new Date(date)
+
+  let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear()
+  let monthsAgo = currentDate.getMonth() - targetDate.getMonth()
+  let daysAgo = currentDate.getDate() - targetDate.getDate()
+
+  let formattedDate = ""
+
+  if (yearsAgo > 0) {
+    formattedDate = `${yearsAgo}y ago`
+  } else if (monthsAgo > 0) {
+    formattedDate = `${monthsAgo}m ago`
+  } else if (daysAgo > 0) {
+    formattedDate = `${daysAgo}d ago`
+  } else {
+    formattedDate = "Today"
+  }
+
+  let fullDate = targetDate.toLocaleString("en-us", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  })
+
+  return `${fullDate} - ${formattedDate}`
 }

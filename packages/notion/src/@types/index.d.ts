@@ -28,10 +28,11 @@ type Understand = {
 
 type Nullable<T> = T | null
 
+// TODO: mapping type with rich colors
 export interface NotionHeaderDto {
   title: string
-  tags: TagDto[] | any
+  tags: string[] | []
   status: string | any
   date: string | any
-  understand: Understand | any
+  understand: UnderstandCode | any
 }

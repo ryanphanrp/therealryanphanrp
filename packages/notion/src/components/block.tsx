@@ -1,18 +1,18 @@
 import * as React from "react"
 
 import * as types from "notion-types"
-import { BlockType } from "../utils/enum"
 import { getBlockTitle, uuidToId } from "notion-utils"
+import { BlockType } from "../utils/enum"
 
-import { cs } from "../utils/notion-util"
-import { Callout } from "./blocks/callout"
-import CodeBlock from "./blocks/code"
-import { SubSubHeader } from "./blocks/sub-sub-header"
-import NumberedList from "./blocks/numbered-list"
-import TextBlock from "./blocks/text-block"
-import Bookmark from "./blocks/bookmark"
 import { Separator } from "@shadui/separator"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "ui/components/ui/accordion"
+import { cs } from "../utils/notion-util"
+import Bookmark from "./blocks/bookmark"
+import { Callout } from "./blocks/callout"
+import CodeBlock from "./blocks/code"
+import NumberedList from "./blocks/numbered-list"
+import { SubSubHeader } from "./blocks/sub-sub-header"
+import TextBlock from "./blocks/text-block"
 import { useNotionContext } from "./context"
 
 interface BlockProps {
@@ -107,7 +107,7 @@ export const Block: React.FC<BlockProps> = props => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item">
             <AccordionTrigger className="py-1.5 text-left">{getBlockTitle(block, recordMap)}</AccordionTrigger>
-            <AccordionContent>{children}</AccordionContent>
+            <AccordionContent className="pl-6">{children}</AccordionContent>
           </AccordionItem>
         </Accordion>
       )
