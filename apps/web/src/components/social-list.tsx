@@ -37,7 +37,7 @@ const socialList: SocialItemProps[] = [
 const SocialItem: React.FC<SocialItemProps> = ({ link, icon }) => {
   return (
     <div className="social-item mx-2">
-      <a className="transition-all duration-300 hover:text-cyan-700" href={link} rel="noreferrer" target="_blank">
+      <a className="hover:text-primary transition-all duration-300" href={link} rel="noreferrer" target="_blank">
         {icon}
       </a>
     </div>

@@ -3,7 +3,7 @@
 }
 
 .highlight-underline {
-  @apply cursor-pointer underline underline-offset-4 hover:decoration-cyan-700 hover:decoration-2;
+  @apply hover:decoration-primary cursor-pointer underline underline-offset-4 hover:decoration-2;
 }
 
 /* About */
