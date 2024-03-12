@@ -4,7 +4,7 @@ import { NotionHeaderDto } from "../@types"
 import { formatDateTime } from "../utils/notion-util"
 import Tags from "./tags"
 
-const NotionHeader: React.FC<NotionHeagderDto> = ({ title, understand, tags, status, date }) => {
+const NotionHeader: React.FC<NotionHeaderDto> = ({ title, understand, tags, status, date }) => {
   const timeDate = formatDateTime(date)
   return (
     <div className="notion-page">
