@@ -30,9 +30,9 @@ type Nullable<T> = T | null
 
 // TODO: mapping type with rich colors
 export interface NotionHeaderDto {
-  title: string
-  tags: string[] | []
-  status: string | any
-  date: string | any
-  understand: UnderstandCode | any
+  title: any
+  tags: any
+  status: any
+  date: any
+  understand: any
 }
