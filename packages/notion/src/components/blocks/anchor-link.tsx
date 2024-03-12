@@ -1,9 +1,9 @@
 "use client"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { formatHashLink } from "../../utils/notion-util"
 
 type Props = {
-  children: JSX.Element
+  children: React.ReactElement
   text: string
 }
 

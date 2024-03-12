@@ -4,7 +4,7 @@ import * as types from "notion-types"
 import { getBlockTitle, uuidToId } from "notion-utils"
 import { BlockType } from "../utils/enum"
 
-import { Separator } from "@shadui/separator"
+import { Separator } from "ui/components/ui/separator"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "ui/components/ui/accordion"
 import { cs } from "../utils/notion-util"
 import Bookmark from "./blocks/bookmark"

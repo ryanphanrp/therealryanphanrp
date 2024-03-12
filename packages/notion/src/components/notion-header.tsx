@@ -1,4 +1,4 @@
-import { Separator } from "@shadui/separator"
+import { Separator } from "ui/components/ui/separator"
 import React from "react"
 import { NotionHeaderDto } from "../@types"
 import { formatDateTime } from "../utils/notion-util"
