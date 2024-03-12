@@ -9,7 +9,7 @@ const Tags: React.FC<TagsProps> = ({ tags, ...props }) => {
         <span
           className="text-primary mr-2 cursor-pointer font-mono text-sm font-semibold tracking-wide underline-offset-2 hover:underline"
           key={tag}>
-          {tag}
+          #{tag}
         </span>
       ))}
     </div>

@@ -8,12 +8,6 @@ body {
   height: 100%;
 }
 
-body {
-  background-image: radial-gradient(circle at 12.5px 12.5px, lightgray 2%, transparent 0%),
-    radial-gradient(circle at 37.5px 37.5px, lightgray 2%, transparent 0%);
-  background-size: 80px 80px;
-}
-
 :root {
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
