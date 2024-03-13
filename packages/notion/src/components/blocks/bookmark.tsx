@@ -12,7 +12,7 @@ type BookmarkProps = {
   blockId: string
 }
 
-const Bookmark: React.FC<BookmarkProps> = ({ block, blockId }) => {
+export const Bookmark: React.FC<BookmarkProps> = ({ block, blockId }) => {
   const { mapImageUrl } = useNotionContext()
 
   if (!block.properties) return null
@@ -82,5 +82,3 @@ const Bookmark: React.FC<BookmarkProps> = ({ block, blockId }) => {
     </Link>
   )
 }
-
-export default Bookmark

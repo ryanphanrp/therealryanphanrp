@@ -9,7 +9,7 @@ type TextBlockProps = {
   children?: React.ReactNode
 } & React.HTMLProps<HTMLDivElement>
 
-function TextBlock({ blockId, block, children, ...props }: TextBlockProps) {
+export function TextBlock({ blockId, block, children, ...props }: TextBlockProps) {
   if (!block.properties && !block.content?.length) {
     return <div className={cs("notion-blank", blockId)}>&nbsp;</div>
   }
@@ -22,5 +22,3 @@ function TextBlock({ blockId, block, children, ...props }: TextBlockProps) {
     </div>
   )
 }
-
-export default TextBlock

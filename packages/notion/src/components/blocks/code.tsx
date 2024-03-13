@@ -11,7 +11,7 @@ type CodeBlockProps = {
   defaultLanguage?: string
 } & React.HTMLProps<HTMLDivElement>
 
-export default function CodeBlock({ block, defaultLanguage = "text", ...props }: CodeBlockProps): React.ReactElement {
+export function CodeBlock({ block, defaultLanguage = "text", ...props }: CodeBlockProps): React.ReactElement {
   const { recordMap } = useNotionContext()
   const content = getBlockTitle(block, recordMap)
   const language = (block.properties?.language?.[0]?.[0] || defaultLanguage).toLowerCase()

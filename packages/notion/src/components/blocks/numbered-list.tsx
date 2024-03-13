@@ -4,7 +4,7 @@ import { Text } from "./text"
 import { useNotionContext } from "../context"
 import { BlockType } from "../../utils/enum"
 
-function NumberedList({ blockId, block, children, ...props }: any) {
+export function NumberedList({ blockId, block, children, ...props }: any) {
   const { recordMap } = useNotionContext()
 
   const wrapList = (content: React.ReactNode, start?: number) =>
@@ -42,5 +42,3 @@ function NumberedList({ blockId, block, children, ...props }: any) {
 
   return isTopLevel ? wrapList(output, start) : output
 }
-
-export default NumberedList

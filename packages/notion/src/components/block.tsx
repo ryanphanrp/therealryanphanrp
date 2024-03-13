@@ -7,13 +7,20 @@ import { BlockType } from "../utils/enum"
 import { Separator } from "ui/components/ui/separator"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "ui/components/ui/accordion"
 import { cs } from "../utils/notion-util"
-import Bookmark from "./blocks/bookmark"
-import { Callout } from "./blocks/callout"
-import CodeBlock from "./blocks/code"
-import NumberedList from "./blocks/numbered-list"
-import { SubSubHeader } from "./blocks/sub-sub-header"
-import TextBlock from "./blocks/text-block"
 import { useNotionContext } from "./context"
+import {
+  Bookmark,
+  Callout,
+  CodeBlock,
+  GoogleDrive,
+  NotionFile,
+  NotionTableRow,
+  NumberedList,
+  SubSubHeader,
+  Text,
+  TextBlock
+} from "./blocks"
+import { Checkbox } from "ui/components/ui/checkbox"
 
 interface BlockProps {
   block: types.Block
@@ -77,6 +84,12 @@ export const Block: React.FC<BlockProps> = props => {
     case BlockType.CODE:
       return <CodeBlock block={block} />
 
+    case BlockType.DRIVE:
+      return <GoogleDrive block={block} />
+
+    case BlockType.FILE:
+      return <NotionFile block={block} />
+
     case BlockType.COLUMN_LIST:
       return <div className={cs("notion-row", blockId)}>{children}</div>
 
@@ -116,7 +129,20 @@ export const Block: React.FC<BlockProps> = props => {
       return <div className="table-of-contents">Table of Contents</div>
 
     case BlockType.TO_DO:
-      return <div className="to-do">To Do</div>
+      const isChecked = block.properties?.checked?.[0]?.[0] === "Yes"
+      return (
+        <div className="mb-1 flex items-center space-x-2">
+          <Checkbox checked={isChecked} id="terms" />
+          <label
+            htmlFor="terms"
+            className={cs(
+              isChecked && "line-through",
+              "leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            )}>
+            <Text value={block.properties?.title} block={block} />
+          </label>
+        </div>
+      )
 
     case BlockType.TRANSCLUSION_CONTAINER:
       return <div className={cs("notion-sync-block", blockId)}>{children}</div>
@@ -132,7 +158,7 @@ export const Block: React.FC<BlockProps> = props => {
       )
 
     case BlockType.TABLE_ROW:
-      return <tr className="table-row">Table Row</tr>
+      return <NotionTableRow block={block} blockId={blockId} />
 
     default:
       if (process.env.NODE_ENV !== "production") {
