@@ -1,4 +1,5 @@
 import PostDetail from "@notion/post-detail"
+import React from "react"
 
 interface PageProps {
   params: {
@@ -6,11 +7,7 @@ interface PageProps {
   }
 }
 
-export default function Page(props: Readonly<PageProps>) {
+export default function Page(props: Readonly<PageProps>): React.ReactElement {
   const { pageId } = props.params
-  return (
-    <main>
-      <PostDetail pageId={pageId} />
-    </main>
-  )
+  return <PostDetail pageId={pageId} />
 }
