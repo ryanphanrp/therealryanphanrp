@@ -1,7 +1,6 @@
 import React from "react"
-
-const DEFAULT_IMAGE = "https://www.notion.so/images/page-cover-default.png"
-const DEFAULT_IMAGE_ALT = "Notion default image"
+import { UnLazyImage } from "@unlazy/react"
+import notionConfig from "../../config/notion-config"
 
 type NotionImageProps = {
   customSrc: string | null
@@ -10,12 +9,10 @@ type NotionImageProps = {
 
 export default function NotionImage({ customSrc, customAlt, ...props }: NotionImageProps) {
   return (
-    <img
+    <UnLazyImage
       {...props}
-      className="notion-image"
-      src={customSrc ?? DEFAULT_IMAGE}
-      alt={customAlt ?? DEFAULT_IMAGE_ALT}
-      loading="lazy"
+      src={customSrc ?? notionConfig.defaultImage}
+      alt={customAlt ?? notionConfig.defaultImgAlt}
     />
   )
 }

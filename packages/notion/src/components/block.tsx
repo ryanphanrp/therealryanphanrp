@@ -13,6 +13,7 @@ import {
   Callout,
   CodeBlock,
   GoogleDrive,
+  ImageNotion,
   NotionFile,
   NotionTableRow,
   NumberedList,
@@ -80,6 +81,7 @@ export const Block: React.FC<BlockProps> = props => {
     case BlockType.CODEPEN:
     case BlockType.EXCALIDRAW:
     case BlockType.IMAGE:
+      return <ImageNotion blockId={blockId} block={block} />
     case BlockType.GIST:
     case BlockType.CODE:
       return <CodeBlock block={block} />

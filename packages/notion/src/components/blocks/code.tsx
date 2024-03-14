@@ -28,7 +28,7 @@ export function CodeBlock({ block, defaultLanguage = "text", ...props }: CodeBlo
           Copy
         </Button>
       </div>
-      <pre className="border-primary overflow-x-auto border bg-white p-2 text-sm">
+      <pre className="border-primary overflow-x-auto scroll-smooth border bg-white p-2 text-sm">
         <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
       </pre>
     </div>
