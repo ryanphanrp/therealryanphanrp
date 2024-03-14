@@ -18,7 +18,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@shadui/*": ["../../packages/ui/components/ui/*"],
-      "@shared-utils/*": ["../../packages/shared-utils/*"]
+      "@shared-utils/*": ["../../packages/shared-utils/*"],
+      "@notion/*": ["../../packages/notion/src/*"]
     }
   },
   "include": ["src", "next-env.d.ts"],

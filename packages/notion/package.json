@@ -1,0 +1,42 @@
+{
+  "name": "notion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.tsx",
+  "types": "./index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "files": [
+    "build",
+    "src/styles.css"
+  ],
+  "author": "Ryan Phan",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "copy-to-clipboard": "^3.3.3",
+    "notion-client": "^6.16.0",
+    "notion-compat": "^6.16.0",
+    "notion-types": "^6.16.0",
+    "notion-utils": "^6.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "shared-utils": "workspace:*",
+    "sugar-high": "^0.6.0",
+    "ui": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@unlazy/react": "^0.11.1",
+    "autoprefixer": "^10.4.17",
+    "eslint-config-custom": "workspace:*",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.3.3"
+  }
+}
