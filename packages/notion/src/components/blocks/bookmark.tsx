@@ -1,18 +1,19 @@
-import React from "react"
 import { Block } from "notion-types"
-import { Text } from "../blocks/text"
-import { cs } from "../../utils/notion-util"
 import { getTextContent } from "notion-utils"
+import React from "react"
+import { cs } from "../../utils/notion-util"
 import Link from "../blocks/link"
-import { useNotionContext } from "../context"
 import NotionImage from "../blocks/notion-image"
+import { Text } from "../blocks/text"
+import { useNotionContext } from "../context"
 
 type BookmarkProps = {
   block: Block
   blockId: string
+  className?: string
 }
 
-export const Bookmark: React.FC<BookmarkProps> = ({ block, blockId }) => {
+export const Bookmark: React.FC<BookmarkProps> = ({ block, blockId, className }) => {
   const { mapImageUrl } = useNotionContext()
 
   if (!block.properties) return null
@@ -41,7 +42,8 @@ export const Bookmark: React.FC<BookmarkProps> = ({ block, blockId }) => {
       className={cs(
         "notion-row border-primary notion-bookmark flex h-24 max-h-24 w-full border border-l-4",
         block.format?.block_color && `notion-${block.format.block_color}`,
-        blockId
+        blockId,
+        className
       )}
       href={link[0][0]}>
       <div className="max-h-24 p-2">

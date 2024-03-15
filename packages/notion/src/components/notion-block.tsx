@@ -1,7 +1,7 @@
 "use client"
-import React from "react"
-import { useNotionContext } from "./context"
+import React, { Suspense } from "react"
 import { Block } from "./block"
+import { useNotionContext } from "./context"
 
 class NotionBlockProps {
   className?: string
@@ -27,10 +27,12 @@ export const NotionBlock = ({ blockId, level = 0, ...props }: NotionBlockProps) 
     return null
   }
   return (
-    <Block key={id} level={level} block={block} {...props}>
-      {block?.content?.map(contentBlockId => (
-        <NotionBlock key={contentBlockId} blockId={contentBlockId} level={level + 1} {...props} />
-      ))}
-    </Block>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Block key={id} level={level} block={block} {...props}>
+        {block?.content?.map(contentBlockId => (
+          <NotionBlock key={contentBlockId} blockId={contentBlockId} level={level + 1} {...props} />
+        ))}
+      </Block>
+    </Suspense>
   )
 }

@@ -4,7 +4,8 @@
   "packageManager": "pnpm@8.15.0",
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --parallel",
+    "clean": "turbo run clean",
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint -- --fix",
     "format": "prettier '**/*.{js,ts,css,scss,jsx,tsx}' --write",

@@ -3,11 +3,11 @@ import * as React from "react"
 import { Block, Decoration, ExternalObjectInstance } from "notion-types"
 import { parsePageId } from "notion-utils"
 
-import { useNotionContext } from "../context"
 import { getHashFragmentValue } from "../../utils/notion-util"
-import { PageTitle } from "../stuff/page-title"
 import Link from "../blocks/link"
 import NotionImage from "../blocks/notion-image"
+import { useNotionContext } from "../context"
+import { PageTitle } from "../stuff/page-title"
 
 /**
  * Renders a single piece of Notion text, including basic rich text formatting.
@@ -148,11 +148,14 @@ export const Text: React.FC<{
                 }
                 const name = [user.given_name, user.family_name].filter(Boolean).join(" ")
                 return (
-                  <NotionImage
-                    className="notion-user"
-                    customSrc={mapImageUrl(user.profile_photo, block)}
-                    customAlt={name}
-                  />
+                  <span className="notion-user-wrapper bg-primary flex w-auto items-center rounded-full p-0.5">
+                    <NotionImage
+                      className="notion-user h-4 w-4 rounded-full"
+                      customSrc={mapImageUrl(user.profile_photo, block)}
+                      customAlt={name}
+                    />
+                    <span className="notion-user-name text-primary-foreground text-sm">{name}</span>
+                  </span>
                 )
               }
 

@@ -3,7 +3,7 @@ import * as React from "react"
 
 import { ExtendedRecordMap } from "notion-types"
 import { defaultMapImageUrl, defaultMapPageUrl } from "../utils/notion-util"
-import { MapImageUrlFn, MapPageUrlFn } from "../utils/types"
+import { MapImageUrlFn, MapPageUrlFn } from "../types/notion"
 
 export interface NotionContext {
   recordMap: ExtendedRecordMap
