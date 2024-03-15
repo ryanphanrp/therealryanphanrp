@@ -1,6 +1,6 @@
 import { ExtendedRecordMap } from "notion-types"
+import { PostCardDto, TagDto } from "../types"
 import { notionAPI, notionPrivateAPI } from "./client"
-import { PostCardDto, TagDto } from "../@types"
 
 const DATABASE_ID = "3f740c7e7627414f92248b9333dd2a0f"
 

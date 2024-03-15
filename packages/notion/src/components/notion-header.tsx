@@ -1,5 +1,5 @@
 import React from "react"
-import { NotionHeaderDto } from "../@types"
+import { NotionHeaderDto } from "../types"
 import { formatDateTime } from "../utils/notion-util"
 import Tags from "./tags"
 

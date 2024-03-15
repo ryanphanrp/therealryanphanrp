@@ -1,5 +1,5 @@
 import { FC, memo } from "react"
-import { PostCardDto } from "./@types"
+import { PostCardDto } from "./types"
 
 const PostCard: FC<PostCardDto> = ({ id, title, date }) => {
   return (

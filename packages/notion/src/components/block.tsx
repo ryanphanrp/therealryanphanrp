@@ -4,24 +4,26 @@ import * as types from "notion-types"
 import { getBlockTitle, uuidToId } from "notion-utils"
 import { BlockType } from "../utils/enum"
 
-import { Separator } from "ui/components/ui/separator"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "ui/components/ui/accordion"
+import { Checkbox } from "ui/components/ui/checkbox"
+import { Separator } from "ui/components/ui/separator"
 import { cs } from "../utils/notion-util"
-import { useNotionContext } from "./context"
 import {
   Bookmark,
   Callout,
   CodeBlock,
   GoogleDrive,
   ImageNotion,
+  NotionAudio,
   NotionFile,
+  NotionPlayer,
   NotionTableRow,
   NumberedList,
   SubSubHeader,
   Text,
   TextBlock
 } from "./blocks"
-import { Checkbox } from "ui/components/ui/checkbox"
+import { useNotionContext } from "./context"
 
 interface BlockProps {
   block: types.Block
@@ -73,6 +75,13 @@ export const Block: React.FC<BlockProps> = props => {
           {children}
         </NumberedList>
       )
+
+    case BlockType.VIDEO:
+      return <NotionPlayer block={block} className="mb-1" />
+
+    case BlockType.AUDIO:
+      return <NotionAudio block={block} className="mb-1" />
+
     case BlockType.TWEET:
     case BlockType.MAPS:
     case BlockType.PDF:
@@ -81,7 +90,7 @@ export const Block: React.FC<BlockProps> = props => {
     case BlockType.CODEPEN:
     case BlockType.EXCALIDRAW:
     case BlockType.IMAGE:
-      return <ImageNotion blockId={blockId} block={block} />
+      return <ImageNotion className="mb-1" block={block} />
     case BlockType.GIST:
     case BlockType.CODE:
       return <CodeBlock block={block} />
@@ -115,13 +124,15 @@ export const Block: React.FC<BlockProps> = props => {
       return <Callout blockId={blockId} block={block} />
 
     case BlockType.BOOKMARK:
-      return <Bookmark block={block} blockId={blockId} />
+      return <Bookmark className="mb-1" block={block} blockId={blockId} />
 
     case BlockType.TOGGLE:
       return (
         <Accordion type="single" collapsible>
           <AccordionItem value="item">
-            <AccordionTrigger className="py-1.5 text-left">{getBlockTitle(block, recordMap)}</AccordionTrigger>
+            <AccordionTrigger className="flex-row-reverse items-center py-1.5 text-left">
+              <div className="ml-2 mr-auto">{getBlockTitle(block, recordMap)}</div>
+            </AccordionTrigger>
             <AccordionContent className="pl-6">{children}</AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -3,9 +3,9 @@
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@notion/*": ["./src/*"]
+      "@/*": ["./src/*"]
     }
   }
 }

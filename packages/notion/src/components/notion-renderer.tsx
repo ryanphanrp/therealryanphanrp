@@ -1,7 +1,7 @@
 import { ExtendedRecordMap } from "notion-types"
 import { getPageTitle } from "notion-utils"
+import React, { Suspense } from "react"
 import { getProperty } from "../utils/notion-util"
-import React from "react"
 import { NotionContextProvider } from "./context"
 import { NotionBlock } from "./notion-block"
 import NotionHeader from "./notion-header"
@@ -25,12 +25,12 @@ const NotionRenderer = async ({ recordMap, pageId, ...rest }: NotionRendererProp
   }
 
   return (
-    <>
+    <Suspense fallback={<div>Loading...</div>}>
       <NotionHeader {...pageHeaderData} />
       <NotionContextProvider rootPageId={pageId} recordMap={recordMap}>
         <NotionBlock blockId={pageId} {...rest} />
       </NotionContextProvider>
-    </>
+    </Suspense>
   )
 }
 

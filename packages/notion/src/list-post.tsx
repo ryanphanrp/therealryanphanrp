@@ -1,6 +1,6 @@
 import { convertToArticleList, getAllPosts } from "./lib/notion"
 import PostCard from "./post-card"
-import { PostCardDto } from "./@types"
+import { PostCardDto } from "./types"
 
 export default async function ListPost() {
   const articles = await getArticles()
