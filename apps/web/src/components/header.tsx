@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import type { FC } from "react"
+import React from "react"
 import { cn } from "@shared-utils/cn"
 
 const navItems = {
@@ -18,7 +18,7 @@ const navItems = {
   }
 }
 
-const Header: FC = () => {
+export default function Header(): React.ReactElement {
   let pathname = usePathname() || "/"
   if (pathname.includes("/blog/")) {
     pathname = "/blog"
@@ -55,5 +55,3 @@ const Header: FC = () => {
     </header>
   )
 }
-
-export default Header

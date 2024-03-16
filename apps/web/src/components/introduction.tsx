@@ -1,8 +1,8 @@
-import type { FC } from "react"
+import React from "react"
 import siteCfg from "@/config/site.config"
 import SocialList from "./social-list"
 
-const Introdution: FC = () => {
+export default function Introduction(): React.ReactElement {
   return (
     <div>
       <div className="mb-4 text-3xl font-medium tracking-wider">Yoo!</div>
@@ -23,5 +23,3 @@ const Introdution: FC = () => {
     </div>
   )
 }
-
-export default Introdution
