@@ -4,52 +4,51 @@
     Sugar High Code Color Scheme
 */
 .sh__class {
-    color: #2d5e9d;
+  color: #2d5e9d;
 }
 
 .sh__identifier {
-    color: #2d333b;
+  color: #2d333b;
 }
 
 .sh__sign {
-    color: #8996a3;
+  color: #8996a3;
 }
 
 .sh__string {
-    color: #00a99a;
+  color: #00a99a;
 }
 
 .sh__keyword {
-    color: #f47067;
+  color: #f47067;
 }
 
 .sh__comment {
-    color: #a19595;
+  color: #a19595;
 }
 
 code {
-    font-family: "JetBrains Mono", monospace !important;
+  font-family: "JetBrains Mono", monospace !important;
 }
-
 
 /* Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary) var(--primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--primary);
-    border-radius: 15px;
+  background: var(--primary);
+  border-radius: 15px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-    border-radius: 15px;
-    border: 3px solid var(--primary);
+  background-color: var(--secondary);
+  border-radius: 15px;
+  border: 3px solid var(--primary);
 }
