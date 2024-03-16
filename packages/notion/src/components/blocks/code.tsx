@@ -3,7 +3,7 @@ import { Block } from "notion-types"
 import { getBlockTitle } from "notion-utils"
 import React from "react"
 import { highlight } from "sugar-high"
-import { Button } from "ui/components/ui/button"
+import { Button } from "@shadui/button"
 import { useNotionContext } from "../context"
 
 type CodeBlockProps = {

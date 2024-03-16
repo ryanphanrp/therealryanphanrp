@@ -1,5 +1,5 @@
 @import "./customize.css";
-@import "ui/styles/globals.css";
+@import "@ui/globals.css";
 
 html,
 body {

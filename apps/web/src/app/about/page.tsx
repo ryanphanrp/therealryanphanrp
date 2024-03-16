@@ -1,7 +1,8 @@
 import Image from "next/image"
+import React from "react"
 import siteConfig from "@/config/site.config"
 
-export default function Page() {
+export default function Page(): React.ReactElement {
   return (
     <main className="md:text-md text-description text-sm">
       <Image alt="image" height="80" src="/pepe.svg" width="80" />
@@ -34,7 +35,7 @@ export default function Page() {
         <a className="highlight-underline" href={siteConfig.socialList.facebook} rel="noreferrer" target="_blank">
           Facebook
         </a>
-        . I am always open to interesting conversations and collaborations.
+        <span>. I am always open to interesting conversations and collaborations.</span>
       </div>
     </main>
   )

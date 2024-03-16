@@ -1,5 +1,5 @@
 import * as React from "react"
-import { cn } from "shared-utils/cn"
+import { cn } from "@shared-utils/cn"
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   type?: "text" | "password" | "email" | "number" | "search" | "tel" | "url"

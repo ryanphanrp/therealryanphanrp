@@ -14,13 +14,7 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": false,
-    "target": "ES5",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@shadui/*": ["../../packages/ui/components/ui/*"],
-      "@shared-utils/*": ["../../packages/shared-utils/*"],
-      "@notion/*": ["../../packages/notion/src/*"]
-    }
+    "target": "ES5"
   },
   "include": ["src", "next-env.d.ts"],
   "exclude": ["node_modules"]

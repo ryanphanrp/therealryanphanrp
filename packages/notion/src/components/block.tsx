@@ -2,12 +2,7 @@ import * as React from "react"
 
 import * as types from "notion-types"
 import { getBlockTitle, uuidToId } from "notion-utils"
-import { BlockType } from "../utils/enum"
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "ui/components/ui/accordion"
-import { Checkbox } from "ui/components/ui/checkbox"
-import { Separator } from "ui/components/ui/separator"
-import { cs } from "../utils/notion-util"
 import {
   Bookmark,
   Callout,
@@ -24,6 +19,11 @@ import {
   TextBlock
 } from "./blocks"
 import { useNotionContext } from "./context"
+import { BlockType } from "../types/enum"
+import { cn } from "@shared-utils/cn"
+import { Separator } from "@shadui/separator"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@shadui/accordion"
+import { Checkbox } from "@shadui/checkbox"
 
 interface BlockProps {
   block: types.Block
@@ -49,7 +49,7 @@ export const Block: React.FC<BlockProps> = props => {
 
   switch (block.type) {
     case BlockType.PAGE:
-      return <div className={cs("notion-page", blockId)}>{children}</div>
+      return <div className={cn("notion-page", blockId)}>{children}</div>
     case BlockType.COLLECTION_VIEW_PAGE:
     case BlockType.HEADER:
     case BlockType.SUB_HEADER:
@@ -102,7 +102,7 @@ export const Block: React.FC<BlockProps> = props => {
       return <NotionFile block={block} />
 
     case BlockType.COLUMN_LIST:
-      return <div className={cs("notion-row", blockId)}>{children}</div>
+      return <div className={cn("notion-row", blockId)}>{children}</div>
 
     case BlockType.QUOTE: {
       if (!block.properties) return null
@@ -110,7 +110,7 @@ export const Block: React.FC<BlockProps> = props => {
       const title = block.properties.title || "Notion Block Title Fallback"
       return (
         <blockquote
-          className={cs(
+          className={cn(
             "notion-quote border-primary bg-primary/5 mb-2 border-l-2 py-2 pl-4 italic",
             blockColor && `notion-${blockColor}`,
             blockId
@@ -148,7 +148,7 @@ export const Block: React.FC<BlockProps> = props => {
           <Checkbox checked={isChecked} id="terms" />
           <label
             htmlFor="terms"
-            className={cs(
+            className={cn(
               isChecked && "line-through",
               "leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             )}>
@@ -158,14 +158,14 @@ export const Block: React.FC<BlockProps> = props => {
       )
 
     case BlockType.TRANSCLUSION_CONTAINER:
-      return <div className={cs("notion-sync-block", blockId)}>{children}</div>
+      return <div className={cn("notion-sync-block", blockId)}>{children}</div>
 
     case BlockType.ALIAS:
       return <div className="alias">Alias</div>
 
     case BlockType.TABLE:
       return (
-        <table className={cs("notion-simple-table", blockId)}>
+        <table className={cn("notion-simple-table", blockId)}>
           <tbody>{children}</tbody>
         </table>
       )

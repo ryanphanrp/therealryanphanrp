@@ -3,7 +3,7 @@ import { Block, TableBlock } from "notion-types"
 import { useNotionContext } from "../context"
 import { cs } from "../../utils/notion-util"
 import { Text } from "./text"
-import { TableCell, TableRow } from "ui/components/ui/table"
+import { TableCell, TableRow } from "@shadui/table"
 
 interface TableRowProps extends React.HTMLProps<HTMLTableRowElement> {
   block: Block

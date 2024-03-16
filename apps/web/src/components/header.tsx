@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import type { FC } from "react"
-import { cn } from "shared-utils/cn"
+import { cn } from "@shared-utils/cn"
 
 const navItems = {
   "/": {
@@ -31,7 +31,7 @@ const Header: FC = () => {
           return (
             <Link
               className={cn("hover:text-primary relative flex px-2 py-1 align-middle transition-all", {
-                "font-semibold text-cyan-800": isActive,
+                "text-primary font-semibold": isActive,
                 "text-neutral-500": !isActive
               })}
               href={path}

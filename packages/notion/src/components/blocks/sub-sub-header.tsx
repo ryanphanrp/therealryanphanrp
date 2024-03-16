@@ -2,8 +2,8 @@ import { getBlockParentPage, getPageTableOfContents, getTextContent, uuidToId } 
 import { useNotionContext } from "../context"
 import { cs } from "../../utils/notion-util"
 import { Text } from "./text"
-import { BlockType } from "../../utils/enum"
-import { cn } from "shared-utils/cn"
+import { BlockType } from "../../types/enum"
+import { cn } from "@shared-utils//cn"
 
 // TODO: styling
 export const SubSubHeader = ({ block, blockId, children }: any) => {

@@ -2,7 +2,7 @@ import React from "react"
 import { cs, getListNumber } from "../../utils/notion-util"
 import { Text } from "./text"
 import { useNotionContext } from "../context"
-import { BlockType } from "../../utils/enum"
+import { BlockType } from "../../types/enum"
 
 export function NumberedList({ blockId, block, children, ...props }: any) {
   const { recordMap } = useNotionContext()

@@ -1,7 +1,7 @@
+import { AnimateLoading } from "@ui/components/animate-loading"
 import React from "react"
-import AnimateLoading from "@/components/animate-loading"
 
-const Loading: React.FC = () => {
+function Loading(): React.ReactElement {
   return <AnimateLoading />
 }
 

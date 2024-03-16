@@ -7,10 +7,7 @@
     "preserveWatchOutput": true,
     "module": "ESNext",
     "target": "ES5",
-    "baseUrl": ".",
-    "paths": {
-      "@shared-utils/*": ["./*"]
-    }
+    "baseUrl": "./src"
   },
   "exclude": ["dist", "build", "node_modules"]
 }

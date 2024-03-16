@@ -1,4 +1,3 @@
-"use client"
 import React, { useEffect, useState } from "react"
 import { formatHashLink } from "../../utils/notion-util"
 
@@ -7,7 +6,7 @@ type Props = {
   text: string
 }
 
-export default function AnchorLink({ children, text }: Props) {
+export function AnchorLink({ children, text }: Props) {
   const [hashLink, setHashLink] = useState<string>()
 
   useEffect(() => {

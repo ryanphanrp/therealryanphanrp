@@ -1,6 +1,7 @@
-import AnimateLoading from "@/components/animate-loading"
+import { AnimateLoading } from "@ui/components/animate-loading"
+import React from "react"
 
-function Loading() {
+function Loading(): React.ReactElement {
   return <AnimateLoading />
 }
 
