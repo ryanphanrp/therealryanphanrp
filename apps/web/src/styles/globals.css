@@ -1,5 +1,7 @@
-@import "./customize.css";
 @import "@ui/globals.css";
+@import "./customize.css";
+@import "./notion.css";
+
 
 html,
 body {
