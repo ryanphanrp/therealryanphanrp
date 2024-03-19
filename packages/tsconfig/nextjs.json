@@ -9,12 +9,20 @@
     "declarationMap": false,
     "incremental": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": false,
-    "target": "ES5"
+    "target": "ES5",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@ui/*": ["../../packages/ui/src/*"],
+      "@shadui/*": ["../../packages/ui/src/components/ui/*"],
+      "@shared-utils/*": ["../../packages/shared-utils/src/*"],
+      "@notion/*": ["../../packages/notion/src/*"]
+    }
   },
   "include": ["src", "next-env.d.ts"],
   "exclude": ["node_modules"]

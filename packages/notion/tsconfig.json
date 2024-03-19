@@ -3,6 +3,12 @@
   "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared-utils/*": ["../shared-utils/src/*"],
+      "@ui/*": ["../ui/src/*"],
+      "@shadui/*": ["../ui/src/components/ui/*"]
+    }
   }
 }

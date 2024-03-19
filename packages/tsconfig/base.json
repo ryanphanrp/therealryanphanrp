@@ -15,15 +15,7 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
-    "strictNullChecks": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@ui/*": ["../../packages/ui/src/*"],
-      "@shadui/*": ["../../packages/ui/src/components/ui/*"],
-      "@shared-utils/*": ["../../packages/shared-utils/src/*"],
-      "@notion/*": ["../../packages/notion/src/*"]
-    }
+    "strictNullChecks": true
   },
   "exclude": ["node_modules"]
 }
