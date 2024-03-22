@@ -1,11 +1,10 @@
 import ListPost from "@notion/list-post"
-import NotionBlog from "@notion/index"
 import React from "react"
 
 export default function Page(): React.ReactElement {
   return (
     <>
-      <NotionBlog />
+      <div className="text-primary mb-8 text-2xl font-semibold">read my list</div>
       <ListPost />
     </>
   )

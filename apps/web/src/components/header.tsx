@@ -1,10 +1,10 @@
 "use client"
 
+import { cn } from "@shared-utils/cn"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import React from "react"
-import { cn } from "@shared-utils/cn"
 
 const navItems = {
   "/": {
@@ -28,30 +28,33 @@ export default function Header(): React.ReactElement {
       <div className="flex flex-row space-x-0 pr-10">
         {Object.entries(navItems).map(([path, { name }]) => {
           const isActive = path === pathname
-          return (
-            <Link
-              className={cn("hover:text-primary relative flex px-2 py-1 align-middle transition-all", {
-                "text-primary font-semibold": isActive,
-                "text-neutral-500": !isActive
-              })}
-              href={path}
-              key={path}>
-              {name}
-              {isActive ? (
-                <motion.div
-                  className="bg-primary to-primary absolute inset-0 top-7 z-[-1] mx-2 h-[1px] from-transparent"
-                  layoutId="sidebar"
-                  transition={{
-                    type: "spring",
-                    stiffness: 350,
-                    damping: 30
-                  }}
-                />
-              ) : null}
-            </Link>
-          )
+          return <HeaderItem key={path} path={path} name={name} isActive={isActive} />
         })}
       </div>
     </header>
+  )
+}
+
+function HeaderItem({ path, name, isActive }: { path: string; name: string; isActive: boolean }) {
+  return (
+    <Link
+      className={cn("hover:text-primary relative flex px-2 py-1 align-middle transition-all", {
+        "text-primary font-semibold": isActive,
+        "text-neutral-500": !isActive
+      })}
+      href={path}>
+      {name}
+      {isActive ? (
+        <motion.div
+          className="bg-primary to-primary absolute inset-0 top-7 z-[-1] mx-2 h-[1px] from-transparent"
+          layoutId="sidebar"
+          transition={{
+            type: "spring",
+            stiffness: 350,
+            damping: 30
+          }}
+        />
+      ) : null}
+    </Link>
   )
 }

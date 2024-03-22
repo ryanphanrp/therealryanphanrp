@@ -1,10 +1,9 @@
 {
   "name": "notion",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.1",
+  "description": "Notion Blogs with Notion and ShadUI",
+  "type": "module",
+  "main": "src/index.tsx",
   "keywords": [],
   "files": [
     "build",

@@ -3,10 +3,16 @@
   "display": "React Library",
   "extends": "./base.json",
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "target": "ES5",
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["src/*"],
+      "@ui/*": ["../../packages/ui/src/*"],
+      "@shadui/*": ["../../packages/ui/src/components/ui/*"],
+      "@shared-utils/*": ["../../packages/shared-utils/src/*"],
+      "@notion/*": ["../../packages/notion/src/*"]
+    }
   },
   "include": [".", "../types/next-auth.d.ts"],
   "exclude": ["dist", "build", "node_modules"]

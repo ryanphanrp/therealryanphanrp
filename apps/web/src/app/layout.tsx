@@ -1,10 +1,10 @@
-import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import "../styles/globals.css"
+import Header from "@/components/header"
+import "@/styles/globals.css"
 import { Toaster } from "@shadui/sonner"
 import { cn } from "@shared-utils/cn"
+import { GeistSans } from "geist/font/sans"
+import type { Metadata } from "next"
 import React from "react"
-import Header from "src/components/header"
 
 const fontBase = GeistSans
 
